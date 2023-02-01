@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
 
     render json: User.all, status: :ok
@@ -33,4 +34,5 @@ class UsersController < ApplicationController
     params.permit(:firstName, :lastName, :email, :mobileNo, :password, :password_confirmation)
   end
 
+  
 end

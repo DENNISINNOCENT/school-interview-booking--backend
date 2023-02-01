@@ -35,6 +35,8 @@ class InterviewsController < ApplicationController
 
     def find_interview
     interview = Interview.find(params[:id])
+
     end
+    
 
 end
