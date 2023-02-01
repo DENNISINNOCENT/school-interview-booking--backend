@@ -1,24 +1,24 @@
 class InterviewsController < ApplicationController
 
     def index
-        render json: Interview.all 
+        render json: Interview.all ,status: :ok
     end
 
     def create
     interview =Interview.create(interview_params)
-    render json: interview
+    render json: interview,status: :created
         
     end
 
     def update
     interview = find_interview
     interview.update(interview_params)
-    render json: interview
+    render json: interview,status: :accepted
     end
 
     def show
     interview = find_interview
-    render json: interview
+    render json: interview,status: :ok
     end
 
     def destroy
