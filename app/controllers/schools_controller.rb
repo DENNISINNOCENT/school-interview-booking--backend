@@ -1,4 +1,5 @@
 class SchoolsController < ApplicationController
+   
     def index
         render json: School.all
     end
@@ -10,8 +11,8 @@ class SchoolsController < ApplicationController
     end
 
     def create
-        school =School.create(school_params)
-        render json: school
+        school = School.create(school_params)
+        render json: school, status: :created
     end
 
     def update
@@ -33,6 +34,6 @@ class SchoolsController < ApplicationController
     end
 
     def school_params
-        params.permit[:name,:county,:subcounty,:email,:mobileNo,:openingDate,:closingDate,:requirements]
+        params.permit(:name, :county, :subcounty, :email, :mobileNo, :openingDate, :closingDate, :requirements)
     end
 end
