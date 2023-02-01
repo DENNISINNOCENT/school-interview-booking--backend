@@ -1,12 +1,12 @@
 class SchoolsController < ApplicationController
    
     def index
-        render json: School.all
+        render json: School.all, status: :ok
     end
 
     def show
         school = find_schools
-        render json: school
+        render json: school, status: :ok
 
     end
 
@@ -18,7 +18,7 @@ class SchoolsController < ApplicationController
     def update
         school =find_schools
         school.update(school_params)
-        render json: school
+        render json: school, status: :accepted
 
     end
     def destroy
