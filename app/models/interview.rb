@@ -1,2 +1,3 @@
 class Interview < ApplicationRecord
+   
 end
