@@ -1,3 +1,3 @@
 class SchoolSerializer < ActiveModel::Serializer
-  attributes :name, :county, :subcounty,:email,:mobileNo,:openingDate,:closingDate,:requirements
+  attributes  :id, :name, :county, :subcounty,:email,:mobileNo,:openingDate,:closingDate,:requirements,:interviews
 end

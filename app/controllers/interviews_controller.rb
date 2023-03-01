@@ -30,7 +30,7 @@ class InterviewsController < ApplicationController
     private
 
     def interview_params
-        params.permit(:name,:email,:level, :interviewDate)
+        params.permit(:name,:email,:level, :interviewDate, :user_id, :school_id)
     end
 
     def find_interview

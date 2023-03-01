@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def index
 
-    render json: User.all, status: :ok
+    render json: User.all,include: :interviews, status: :ok
   end
 
   def create

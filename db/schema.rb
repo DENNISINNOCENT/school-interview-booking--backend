@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_01_165316) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_01_023414) do
   create_table "add_column_to_users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_01_165316) do
     t.string "interviewDate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "school_id"
   end
 
   create_table "schools", force: :cascade do |t|
@@ -36,8 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_01_165316) do
     t.string "requirements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "interview_id"
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,7 +47,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_01_165316) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    t.integer "interview_id"
   end
 
 end

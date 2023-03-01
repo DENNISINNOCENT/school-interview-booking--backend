@@ -1,3 +1,4 @@
 class InterviewSerializer < ActiveModel::Serializer
-  attributes :name, :email, :level ,:interviewDate
+
+  attributes :name, :email, :level ,:interviewDate 
 end
